@@ -27,7 +27,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --fix",
     "type-check": "tsc --noEmit",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "deploy:gh-pages": "npm run build && gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "gsap": "^3.12.2"

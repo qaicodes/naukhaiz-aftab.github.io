@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
 
@@ -39,6 +39,17 @@ jobs:
       env:
         NODE_ENV: production
 
+    # Deploy to gh-pages branch
+    - name: Deploy to gh-pages branch
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        publish_branch: gh-pages
+        force_orphan: true
+
+    # Standard GitHub Pages deployment
     - name: Setup Pages
       if: github.ref == 'refs/heads/main'
       uses: actions/configure-pages@v4

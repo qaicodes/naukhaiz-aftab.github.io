@@ -239,3 +239,38 @@ While this is a personal portfolio, suggestions for improvements are welcome:
 ---
 
 **Built with ❤️ by Naukhaiz Aftab** | **© 2025 All Rights Reserved**
+
+## 🚀 GitHub Pages Deployment
+
+This repository is configured for **dual deployment** to GitHub Pages:
+
+### Method 1: Standard GitHub Pages (Recommended)
+The repository deploys automatically to GitHub Pages using GitHub Actions.
+
+**Setup:**
+1. Go to **Settings** → **Pages**
+2. Set **Source** to "GitHub Actions"
+3. The workflow will automatically deploy on push to `main`
+4. Site will be available at: `https://naukhaiz-aftab.github.io/`
+
+### Method 2: gh-pages Branch
+Additionally, the workflow creates a `gh-pages` branch with built files.
+
+**Setup:**
+1. Go to **Settings** → **Pages** 
+2. Set **Source** to "Deploy from a branch"
+3. Select **branch**: `gh-pages`
+4. Select **folder**: `/ (root)`
+5. Click **Save**
+6. Site will be available at: `https://naukhaiz-aftab.github.io/`
+
+### Manual gh-pages Deployment
+If you need to manually deploy:
+
+```bash
+# Build the project
+npm run build
+
+# Deploy to gh-pages branch
+npm run deploy:gh-pages
+```
