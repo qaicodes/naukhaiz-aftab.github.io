@@ -3,700 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Naukhaiz Aftab - Legal Professional specializing in Constitutional Law, Policy Analysis, and Legal Research. Experienced in Digital Privacy Law and Regulatory Compliance.">
+  <meta name="keywords" content="legal professional, constitutional law, policy analysis, legal research, digital privacy, regulatory compliance, legal consultant">
+  <meta name="author" content="Naukhaiz Aftab">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Naukhaiz Aftab - Legal Professional">
+  <meta property="og:description" content="Legal Professional specializing in Constitutional Law, Policy Analysis, and Legal Research">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naukhaiz-aftab.github.io">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Naukhaiz Aftab - Legal Professional">
+  <meta name="twitter:description" content="Legal Professional specializing in Constitutional Law, Policy Analysis, and Legal Research">
+  
   <title>Naukhaiz Aftab - Legal Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #0f172a;
-      --secondary: #1e293b;
-      --accent: #3b82f6;
-      --accent-light: #60a5fa;
-      --success: #10b981;
-      --warning: #f59e0b;
-      --surface: #ffffff;
-      --surface-alt: #f8fafc;
-      --border: #e2e8f0;
-      --text-primary: #0f172a;
-      --text-secondary: #64748b;
-      --text-muted: #94a3b8;
-      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background: var(--surface-alt);
-      overflow-x: hidden;
-    }
-
-    /* Navigation */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-brand {
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      position: relative;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 8rem 2rem 4rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="20" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="80" cy="30" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
-      pointer-events: none;
-    }
-
-    .hero-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-title {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, #ffffff, #f0f9ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      animation: fadeInUp 1s ease-out 0.2s both;
-    }
-
-    .hero-description {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 3rem;
-      opacity: 0.8;
-      animation: fadeInUp 1s ease-out 0.4s both;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      animation: fadeInUp 1s ease-out 0.6s both;
-    }
-
-    .btn {
-      padding: 0.875rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1rem;
-    }
-
-    .btn-primary {
-      background: white;
-      color: var(--accent);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: white;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.5);
-    }
-
-    /* Main Content */
-    .main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-
-    .section {
-      margin-bottom: 6rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      background: var(--gradient-1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Cards */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: var(--shadow-md);
-      transition: all 0.3s ease;
-      border: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gradient-1);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .card-icon {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 0.75rem;
-      background: var(--gradient-1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      color: white;
-    }
-
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .card-subtitle {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .card-content {
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    /* Timeline */
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--border);
-      transform: translateX(-50%);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 3rem;
-      width: calc(50% - 2rem);
-      padding: 2rem;
-      background: var(--surface);
-      border-radius: 1rem;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--border);
-    }
-
-    .timeline-item:nth-child(odd) {
-      left: 0;
-    }
-
-    .timeline-item:nth-child(even) {
-      left: calc(50% + 2rem);
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      top: 2rem;
-      width: 1rem;
-      height: 1rem;
-      background: var(--accent);
-      border-radius: 50%;
-      box-shadow: 0 0 0 4px var(--surface);
-    }
-
-    .timeline-item:nth-child(odd)::before {
-      right: -2.5rem;
-    }
-
-    .timeline-item:nth-child(even)::before {
-      left: -2.5rem;
-    }
-
-    .timeline-date {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .timeline-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .timeline-subtitle {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .skill-category {
-      background: var(--surface);
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--border);
-    }
-
-    .skill-category-title {
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .skill-tag {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      font-size: 0.9rem;
-      margin: 0.25rem;
-      transition: all 0.3s ease;
-      color: var(--text-secondary);
-    }
-
-    .skill-tag:hover {
-      background: var(--accent);
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    /* Contact */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.5rem;
-      background: var(--surface);
-      border-radius: 1rem;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--border);
-      transition: all 0.3s ease;
-    }
-
-    .contact-item:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .contact-icon {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 0.75rem;
-      background: var(--gradient-1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.25rem;
-    }
-
-    .contact-info h3 {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .contact-info p {
-      color: var(--text-secondary);
-    }
-
-    .contact-info a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-      margin-top: 4rem;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding: 6rem 1rem 3rem;
-      }
-
-      .main {
-        padding: 3rem 1rem;
-      }
-
-      .section {
-        margin-bottom: 4rem;
-      }
-
-      .section-title {
-        font-size: 2rem;
-      }
-
-      .timeline::before {
-        left: 1rem;
-      }
-
-      .timeline-item {
-        width: calc(100% - 3rem);
-        left: 2rem !important;
-      }
-
-      .timeline-item::before {
-        left: -2.5rem !important;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Scroll animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#3b82f6">
+  
+  <!-- Modern CSS Reset and Styles -->
+  <link rel="stylesheet" href="/src/styles/main.scss">
 </head>
 <body>
+  <!-- Skip to content link (accessibility) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
-      <a href="#" class="nav-brand">Naukhaiz Aftab</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a href="#hero" class="nav-brand" aria-label="Naukhaiz Aftab - Home">Naukhaiz Aftab</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#education" aria-label="Go to Education section">Education</a></li>
+        <li><a href="#achievements" aria-label="Go to Achievements section">Achievements</a></li>
+        <li><a href="#experience" aria-label="Go to Experience section">Experience</a></li>
+        <li><a href="#publications" aria-label="Go to Publications section">Publications</a></li>
+        <li><a href="blog.html" target="_blank" aria-label="Visit Legal Blog">Blog</a></li>
+        <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
+        <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <header class="hero" id="hero" role="banner">
     <div class="hero-container">
       <h1 class="hero-title">Naukhaiz Aftab</h1>
-      <p class="hero-subtitle">Aspiring Legal Professional & Digital Law Specialist</p>
+      <p class="hero-subtitle">Legal Professional & Policy Analyst</p>
       <p class="hero-description">
-        Experienced legal researcher with expertise in constitutional law, administrative frameworks, and digital law. Specialized in case law synthesis, policy evaluation, and regulatory compliance with focus on GDPR and DPDP Act 2023.
+        Specializing in Constitutional Law, Digital Privacy Regulations, and Legal Research. 
+        Committed to advancing legal scholarship and public policy through analytical excellence.
       </p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-        <a href="#about" class="btn btn-outline">Learn More</a>
+        <a href="#contact" class="btn btn-primary" aria-label="Contact Naukhaiz Aftab">Get In Touch</a>
+        <a href="blog.html" target="_blank" class="btn btn-outline" aria-label="Read Legal Blog">Legal Blog</a>
+        <a href="#publications" class="btn btn-outline" aria-label="View Publications">View Publications</a>
       </div>
     </div>
-  </section>
+  </header>
 
   <!-- Main Content -->
-  <main class="main">
-    <!-- About Section -->
-    <section id="about" class="section fade-in">
-      <div class="section-header">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Dedicated to excellence in legal research and policy analysis</p>
-      </div>
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-icon">⚖️</div>
-          <h3 class="card-title">Legal Research</h3>
-          <p class="card-subtitle">Constitutional & Administrative Law</p>
-          <p class="card-content">Experienced in comprehensive legal research methodologies, case law synthesis, and policy analysis. Specialized in constitutional law, administrative frameworks, and regulatory compliance studies.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🔒</div>
-          <h3 class="card-title">Digital Law Expertise</h3>
-          <p class="card-subtitle">GDPR & Data Protection</p>
-          <p class="card-content">Specialized in digital law literacy with expertise in GDPR compliance, DPDP Act 2023, and emerging technology regulations. Certified in cyber law and AI legal frameworks.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">📚</div>
-          <h3 class="card-title">Academic Excellence</h3>
-          <p class="card-subtitle">Research & Scholarship</p>
-          <p class="card-content">Pursuing LL.B. with strong academic foundation in Business Administration. Actively contributing to legal scholarship and participating in online legal forums and research platforms.</p>
-        </div>
-      </div>
-    </section>
-
+  <main id="main" class="main" role="main">
+    
     <!-- Education Section -->
-    <section id="education" class="section fade-in">
+    <section id="education" class="section fade-in" aria-labelledby="education-title">
       <div class="section-header">
-        <h2 class="section-title">Education</h2>
-        <p class="section-subtitle">Building a strong foundation in law and business</p>
+        <h2 id="education-title" class="section-title">Education</h2>
+        <p class="section-subtitle">Academic foundation in legal studies</p>
       </div>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-date">2023 - 2026</div>
-          <h3 class="timeline-title">Bachelor of Laws (LL.B.)</h3>
-          <p class="timeline-subtitle">Sankalp Institute of Law</p>
-          <p>Comprehensive legal education with focus on constitutional law, administrative frameworks, and legal research methodologies. Expected graduation in 2026.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2018</div>
-          <h3 class="timeline-title">Bachelor of Business Administration</h3>
-          <p class="timeline-subtitle">Jamia Millia Islamia</p>
-          <p>Comprehensive business education providing strong foundation in management, economics, and organizational behavior.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2014</div>
-          <h3 class="timeline-title">Higher Secondary Education</h3>
-          <p class="timeline-subtitle">Ram Kishan Institute</p>
-          <p>Completed Class XII with focus on humanities and social sciences.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2012</div>
-          <h3 class="timeline-title">Secondary Education</h3>
-          <p class="timeline-subtitle">Kendriya Vidyalaya</p>
-          <p>Completed Class X with strong academic foundation.</p>
+          <div class="timeline-date">2024 - 2025</div>
+          <h3 class="timeline-title">LL.B (Bachelor of Law)</h3>
+          <p class="timeline-subtitle">The Kerala Law Academy • Kerala, India</p>
+          <p class="card-content">
+            Pursuing comprehensive legal education with focus on Constitutional Law, Administrative Law, and Digital Privacy Regulations. Active participation in moot courts, legal research projects, and academic seminars.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section fade-in">
+    <!-- Achievements Section -->
+    <section id="achievements" class="section fade-in" aria-labelledby="achievements-title">
       <div class="section-header">
-        <h2 class="section-title">Certifications</h2>
-        <p class="section-subtitle">Professional development in legal and digital law expertise</p>
+        <h2 id="achievements-title" class="section-title">Achievements</h2>
+        <p class="section-subtitle">Recognition for academic and professional excellence</p>
       </div>
       <div class="card-grid">
         <div class="card">
-          <div class="card-icon">🎓</div>
-          <h3 class="card-title">Diploma in Cyber Law</h3>
-          <p class="card-subtitle">Asian School of Cyber Laws • Expected 2025</p>
-          <p class="card-content">Comprehensive training in digital legal frameworks, cybersecurity regulations, and emerging technology law.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🔍</div>
-          <h3 class="card-title">Cyber Law, Legal Research & Analysis</h3>
-          <p class="card-subtitle">Certificate Course • Mar-Apr 2025</p>
-          <p class="card-content">Advanced certification in cyber law principles, legal research methodologies, and analytical frameworks.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🤖</div>
-          <h3 class="card-title">AI and Law</h3>
-          <p class="card-subtitle">Legal Research & Analysis • Mar-Apr 2025</p>
-          <p class="card-content">Specialized certification in artificial intelligence legal frameworks and regulatory compliance.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🔒</div>
-          <h3 class="card-title">PDPC GDPR Compliance Training</h3>
-          <p class="card-subtitle">Data Protection Certification • 2025</p>
-          <p class="card-content">Professional training in GDPR compliance, data protection regulations, and privacy law implementation.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🏆</div>
+          <div class="card-icon" aria-hidden="true">🏆</div>
           <h3 class="card-title">Certificate of Appreciation</h3>
           <p class="card-subtitle">The Kerala Law Academy • 2025</p>
           <p class="card-content">Recognized for outstanding contribution and engagement in legal education and research activities.</p>
@@ -705,13 +109,13 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section fade-in">
+    <section id="experience" class="section fade-in" aria-labelledby="experience-title">
       <div class="section-header">
-        <h2 class="section-title">Experience</h2>
+        <h2 id="experience-title" class="section-title">Experience</h2>
         <p class="section-subtitle">Practical application of legal knowledge</p>
       </div>
       <div class="card">
-        <div class="card-icon">🔍</div>
+        <div class="card-icon" aria-hidden="true">🔍</div>
         <h3 class="card-title">Independent Legal Researcher</h3>
         <p class="card-subtitle">Freelance | 2019 - 2022</p>
         <p class="card-content">
@@ -721,47 +125,47 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="section fade-in">
+    <section id="publications" class="section fade-in" aria-labelledby="publications-title">
       <div class="section-header">
-        <h2 class="section-title">Publications & Research</h2>
+        <h2 id="publications-title" class="section-title">Publications & Research</h2>
         <p class="section-subtitle">Contributing to legal scholarship and public discourse</p>
       </div>
       <div class="card-grid">
         <div class="card">
-          <div class="card-icon">📝</div>
+          <div class="card-icon" aria-hidden="true">📝</div>
           <h3 class="card-title">Legal Blog Articles</h3>
           <p class="card-subtitle">Digital Law & Policy Analysis</p>
           <p class="card-content">
             Regular contributions to legal discourse through analytical blog posts covering constitutional law interpretations, digital privacy regulations, and emerging technology legal frameworks. Focus on making complex legal concepts accessible to broader audiences.
           </p>
           <div style="margin-top: 1rem;">
-            <span class="skill-tag" style="background: var(--accent); color: white; margin: 0.25rem 0.25rem 0.25rem 0;">Constitutional Law</span>
-            <span class="skill-tag" style="background: var(--accent); color: white; margin: 0.25rem 0.25rem 0.25rem 0;">Data Protection</span>
-            <span class="skill-tag" style="background: var(--accent); color: white; margin: 0.25rem 0.25rem 0.25rem 0;">AI Regulation</span>
+            <span class="skill-tag legal">Constitutional Law</span>
+            <span class="skill-tag legal">Data Protection</span>
+            <span class="skill-tag legal">AI Regulation</span>
           </div>
         </div>
         <div class="card">
-          <div class="card-icon">📊</div>
+          <div class="card-icon" aria-hidden="true">📊</div>
           <h3 class="card-title">Policy Research Papers</h3>
           <p class="card-subtitle">Comparative Legal Analysis</p>
           <p class="card-content">
             In-depth research papers analyzing comparative policy frameworks, regulatory impact studies, and legislative effectiveness. Contributing to academic discourse on administrative law and public policy reform initiatives.
           </p>
           <div style="margin-top: 1rem;">
-            <span class="skill-tag" style="background: var(--success); color: white; margin: 0.25rem 0.25rem 0.25rem 0;">Policy Analysis</span>
-            <span class="skill-tag" style="background: var(--success); color: white; margin: 0.25rem 0.25rem 0.25rem 0;">Regulatory Impact</span>
+            <span class="skill-tag compliance">Policy Analysis</span>
+            <span class="skill-tag compliance">Regulatory Impact</span>
           </div>
         </div>
         <div class="card">
-          <div class="card-icon">💡</div>
+          <div class="card-icon" aria-hidden="true">💡</div>
           <h3 class="card-title">Legal Commentary</h3>
           <p class="card-subtitle">Current Affairs & Law</p>
           <p class="card-content">
             Analytical commentary on current legal developments, landmark judgments, and their implications for public policy. Regular contributions to online legal forums and collaborative research platforms.
           </p>
           <div style="margin-top: 1rem;">
-            <span class="skill-tag" style="background: var(--warning); color: white; margin: 0.25rem 0.25rem 0.25rem 0;">Case Analysis</span>
-            <span class="skill-tag" style="background: var(--warning); color: white; margin: 0.25rem 0.25rem 0.25rem 0;">Legal Opinion</span>
+            <span class="skill-tag professional">Case Analysis</span>
+            <span class="skill-tag professional">Legal Opinion</span>
           </div>
         </div>
       </div>
@@ -771,9 +175,9 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section fade-in">
+    <section id="skills" class="section fade-in" aria-labelledby="skills-title">
       <div class="section-header">
-        <h2 class="section-title">Skills & Expertise</h2>
+        <h2 id="skills-title" class="section-title">Skills & Expertise</h2>
         <p class="section-subtitle">Comprehensive skill set for legal practice</p>
       </div>
       <div class="skills-grid">
@@ -828,35 +232,35 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section fade-in">
+    <section id="contact" class="section fade-in" aria-labelledby="contact-title">
       <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 id="contact-title" class="section-title">Get In Touch</h2>
         <p class="section-subtitle">Let's discuss opportunities for collaboration</p>
       </div>
       <div class="contact-grid">
         <div class="contact-item">
-          <div class="contact-icon">📞</div>
+          <div class="contact-icon" aria-hidden="true">📞</div>
           <div class="contact-info">
             <h3>Phone</h3>
             <p><a href="tel:+919354076710">+91 9354076710</a></p>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">📧</div>
+          <div class="contact-icon" aria-hidden="true">📧</div>
           <div class="contact-info">
             <h3>Email</h3>
             <p><a href="mailto:aftab.naukhaiz1997@gmail.com">aftab.naukhaiz1997@gmail.com</a></p>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">🌐</div>
+          <div class="contact-icon" aria-hidden="true">🌐</div>
           <div class="contact-info">
             <h3>Languages</h3>
             <p>English, Hindi</p>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">💼</div>
+          <div class="contact-icon" aria-hidden="true">💼</div>
           <div class="contact-info">
             <h3>Opportunities</h3>
             <p>Open to research collaborations, internships, and legal consulting projects</p>
@@ -867,80 +271,14 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer-content">
       <p>&copy; 2025 Naukhaiz Aftab. All rights reserved.</p>
-      <p style="margin-top: 0.5rem; opacity: 0.8;">Crafted with passion for legal excellence</p>
+      <p>Crafted with passion for legal excellence</p>
     </div>
   </footer>
 
-  <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    // Observe all fade-in elements
-    document.querySelectorAll('.fade-in').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Navbar scroll effect
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.nav');
-
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
-      if (scrollTop > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-      } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-      }
-
-      lastScrollTop = scrollTop;
-    });
-
-    // Add some interactive hover effects
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-8px) scale(1.02)';
-      });
-      
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
-      });
-    });
-
-    // Initialize animations on load
-    window.addEventListener('load', () => {
-      document.body.style.opacity = '1';
-    });
-  </script>
+  <!-- Modern TypeScript Application -->
+  <script type="module" src="/src/scripts/main.ts"></script>
 </body>
 </html>

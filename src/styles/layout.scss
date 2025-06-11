@@ -1,0 +1,347 @@
+// =============================================================================
+// LAYOUT STYLES - NAUKHAIZ AFTAB LEGAL PORTFOLIO
+// =============================================================================
+
+// Navigation
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface-overlay);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: var(--z-fixed);
+  transition: all var(--transition-base);
+
+  &.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.nav-container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: map-get($breakpoints, 'md')) {
+    padding: var(--space-md) var(--space-lg);
+  }
+}
+
+.nav-brand {
+  font-weight: var(--font-bold);
+  font-size: var(--font-size-xl);
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: map-get($breakpoints, 'md')) {
+    gap: var(--space-lg);
+  }
+
+  @media (max-width: map-get($breakpoints, 'sm')) {
+    display: none; // Mobile menu implementation can be added later
+  }
+
+  a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    transition: color var(--transition-base);
+    position: relative;
+    padding: var(--space-sm) 0;
+
+    &:hover {
+      color: var(--accent);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition-base);
+    }
+
+    &:hover::after,
+    &.active::after {
+      width: 100%;
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  padding: calc(8rem + var(--space-xl)) var(--space-xl) var(--space-4xl);
+  background: var(--gradient-primary);
+  color: var(--text-inverse);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: map-get($breakpoints, 'md')) {
+    padding: calc(6rem + var(--space-lg)) var(--space-lg) var(--space-3xl);
+    min-height: 90vh;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="20" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="80" cy="30" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+  }
+}
+
+.hero-container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: clamp(var(--font-size-4xl), 6vw, var(--font-size-6xl));
+  font-weight: var(--font-extrabold);
+  margin-bottom: var(--space-lg);
+  color: #ffffff;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-xl);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out 0.2s both;
+  font-weight: var(--font-medium);
+
+  @media (max-width: map-get($breakpoints, 'sm')) {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.hero-description {
+  font-size: var(--font-size-lg);
+  max-width: 600px;
+  margin: 0 auto var(--space-2xl);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 1s ease-out 0.4s both;
+  line-height: var(--leading-relaxed);
+
+  @media (max-width: map-get($breakpoints, 'sm')) {
+    font-size: var(--font-size-base);
+  }
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+// Main Content
+.main {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-xl);
+
+  @media (max-width: map-get($breakpoints, 'md')) {
+    padding: var(--space-3xl) var(--space-lg);
+  }
+}
+
+.section {
+  margin-bottom: var(--space-4xl);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.section-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-lg);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: map-get($breakpoints, 'md')) {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: var(--leading-relaxed);
+}
+
+// Timeline Layout
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+    transform: translateX(-50%);
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      left: var(--space-lg);
+    }
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-2xl);
+  width: calc(50% - var(--space-xl));
+  padding: var(--space-xl);
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  transition: all var(--transition-base);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  &:nth-child(odd) {
+    left: 0;
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      left: calc(var(--space-lg) + var(--space-xl));
+      width: calc(100% - var(--space-lg) - var(--space-2xl));
+    }
+  }
+
+  &:nth-child(even) {
+    left: calc(50% + var(--space-xl));
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      left: calc(var(--space-lg) + var(--space-xl));
+      width: calc(100% - var(--space-lg) - var(--space-2xl));
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: var(--space-xl);
+    width: var(--space-lg);
+    height: var(--space-lg);
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--surface);
+  }
+
+  &:nth-child(odd)::before {
+    right: calc(-1 * var(--space-xl) - 2px);
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      left: calc(-1 * var(--space-xl) - 2px);
+    }
+  }
+
+  &:nth-child(even)::before {
+    left: calc(-1 * var(--space-xl) - 2px);
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      left: calc(-1 * var(--space-xl) - 2px);
+    }
+  }
+}
+
+// Contact Grid
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+// Footer
+.footer {
+  background: var(--primary);
+  color: var(--text-inverse);
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  margin-top: var(--space-4xl);
+}
+
+.footer-content {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+
+  p {
+    margin: 0;
+    opacity: 0.8;
+    
+    &:first-child {
+      font-weight: var(--font-medium);
+      margin-bottom: var(--space-sm);
+    }
+  }
+} 
