@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://naukhaiz-aftab.github.io/sitemap.xml

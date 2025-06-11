@@ -1,0 +1,50 @@
+{
+  "name": "naukhaiz-aftab-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Modern legal portfolio for Naukhaiz Aftab - Legal Professional specializing in Constitutional Law and Policy Analysis",
+  "author": "Naukhaiz Aftab",
+  "license": "MIT",
+  "homepage": "https://naukhaiz-aftab.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naukhaiz-aftab/naukhaiz-aftab.github.io.git"
+  },
+  "keywords": [
+    "legal",
+    "portfolio",
+    "constitutional-law",
+    "policy-analysis",
+    "legal-research",
+    "vite",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "type-check": "tsc --noEmit",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "gh-pages": "^6.1.0",
+    "sass": "^1.69.5",
+    "terser": "^5.42.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.6"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
