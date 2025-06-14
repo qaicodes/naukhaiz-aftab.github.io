@@ -68,10 +68,10 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run Lighthouse CI
-      uses: treosh/lighthouse-ci-action@v10
+      uses: treosh/lighthouse-ci-action@v12
       with:
         urls: |
           https://naukhaiz-aftab.github.io
         configPath: './.lighthouserc.json'
-        uploadArtifacts: true
+        uploadArtifacts: false
         temporaryPublicStorage: true 
