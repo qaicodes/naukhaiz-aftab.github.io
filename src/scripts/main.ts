@@ -11,6 +11,9 @@
  * - Analytics integration
  */
 
+// Import styles
+import '../styles/main.scss'
+
 import { Navigation } from './components/navigation'
 import { ScrollAnimations } from './components/animations'
 import { ContactForm } from './components/contact-form'
