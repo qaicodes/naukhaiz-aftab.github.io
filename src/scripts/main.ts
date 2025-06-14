@@ -16,7 +16,7 @@ import { ScrollAnimations } from './components/animations'
 import { ContactForm } from './components/contact-form'
 import { Analytics } from './utils/analytics'
 import { Performance } from './utils/performance'
-import { gsap } from 'gsap'
+import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 // Register GSAP plugins
@@ -119,7 +119,7 @@ class LegalPortfolioApp {
    */
   private initializeGSAPAnimations(): void {
     // Create master timeline
-    const masterTimeline = gsap.timeline()
+    const masterTimeline = (gsap as any).timeline();
 
     // Hero section entrance animation
     masterTimeline
@@ -149,7 +149,8 @@ class LegalPortfolioApp {
       }, '-=0.2')
 
     // Enhanced card hover animations
-    gsap.utils.toArray('.card').forEach((card: any) => {
+    const cardElements = (gsap as any).utils.toArray('.card') as Element[];
+    cardElements.forEach((card: Element) => {
       const icon = card.querySelector('.card-icon')
       
       card.addEventListener('mouseenter', () => {
@@ -190,7 +191,8 @@ class LegalPortfolioApp {
     })
 
     // Skills tag hover animations
-    gsap.utils.toArray('.skill-tag').forEach((tag: any) => {
+    const skillTagElements = (gsap as any).utils.toArray('.skill-tag') as Element[];
+    skillTagElements.forEach((tag: Element) => {
       tag.addEventListener('mouseenter', () => {
         gsap.to(tag, {
           scale: 1.05,
@@ -292,7 +294,7 @@ class LegalPortfolioApp {
   /**
    * Handle initialization errors gracefully
    */
-  private handleInitializationError(error: any): void {
+  private handleInitializationError(error: unknown): void {
     // Fallback to basic functionality
     document.body.style.opacity = '1'
     document.body.classList.add('loaded', 'fallback-mode')
@@ -313,7 +315,7 @@ class LegalPortfolioApp {
     }
 
     // Track error for monitoring
-    if (this.analytics) {
+    if (this.analytics && error instanceof Error) {
       this.analytics.trackEvent('initialization_error', {
         error: error.message,
         stack: error.stack

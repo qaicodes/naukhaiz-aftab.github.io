@@ -5,7 +5,7 @@
 
 interface AnalyticsEvent {
   event: string
-  data?: Record<string, any>
+  data?: Record<string, unknown>
   timestamp?: number
 }
 
@@ -36,7 +36,7 @@ export class Analytics {
   /**
    * Track an event
    */
-  trackEvent(event: string, data?: Record<string, any>): void {
+  trackEvent(event: string, data?: Record<string, unknown>): void {
     if (!this.isEnabled) return
 
     const eventData: AnalyticsEvent = {
@@ -103,7 +103,7 @@ export class Analytics {
   /**
    * Get analytics summary
    */
-  getAnalyticsSummary(): Record<string, any> {
+  getAnalyticsSummary(): Record<string, unknown> {
     return {
       sessionId: this.sessionId,
       eventsCount: this.events.length,

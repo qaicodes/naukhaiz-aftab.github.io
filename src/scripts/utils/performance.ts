@@ -14,7 +14,9 @@ export class Performance {
   private observer: PerformanceObserver | null = null
   private isMonitoring = false
 
-  constructor() {}
+  constructor() {
+    // No initialization required
+  }
 
   /**
    * Initialize performance monitoring
@@ -34,7 +36,7 @@ export class Performance {
       try {
         this.observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
-            const value = (entry as any).value || entry.duration || 0
+            const value = (entry as PerformanceEntry & { value?: number }).value || entry.duration || 0
             this.recordMetric(entry.name, value)
           })
         })
@@ -102,8 +104,8 @@ export class Performance {
   /**
    * Get performance summary
    */
-  getPerformanceSummary(): Record<string, any> {
-    const summary: Record<string, any> = {}
+  getPerformanceSummary(): Record<string, unknown> {
+    const summary: Record<string, unknown> = {}
     
     this.metrics.forEach(metric => {
       summary[metric.name] = metric.value

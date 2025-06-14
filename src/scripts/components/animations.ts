@@ -7,7 +7,9 @@ export class ScrollAnimations {
   private observer: IntersectionObserver | null = null
   private animatedElements: Set<Element> = new Set()
 
-  constructor() {}
+  constructor() {
+    // No initialization required
+  }
 
   /**
    * Initialize scroll animations
